@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <title>My Website</title>
+</head>
+
+<body>
+    <header>
+        <p>My WebSite</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#favorite">好きなこと</a></li>
+                <li><a href="#work">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="nav-blank"></div>
+
+    <section class="firstVeiw">
+        <div class="name-box">
+            <div>
+                <h1>Tattsun</h1>
+                <p>WebService Mentor</p>
+            </div>
+        </div>
+        <img src="images/my-image.jpeg" alt="">
+    </section>
+    
+    <section class="profile" id="about">
+        <img src="images/my-icon.jpg" alt="">
+        <div class="profile-text">
+            <h2 class="title">ABOUT</h2>
+            <p>メンター名：たっつん</p>
+            <p>本名：小森達貴</p>
+            <p>所属：名古屋工業大学　情報工学科</p>
+            <p>Leaders：WebService 13th</p>
+        </div>           
+    </section>
+
+    <section class="galary">
+        <div class="circle-box">
+            <div>
+                <h3 id="galary-title"></h3>
+                <p id="galary-text"></p>
+            </div>
+            <img src="images/tenis.jpeg" alt="" class="item top" onclick="print_text(0)">
+            <img src="images/leaders.png" alt="" class="item right" onclick="print_text(1)">
+            <img src="images/neko.png" alt="" class="item bottom" onclick="print_text(2)">
+            <img src="images/books.jpeg" alt="" class="item left" onclick="print_text(3)">
+        </div>
+    </section>
+
+    <div style="height: 100px; background-color: #EBECF0;"></div>
+
+    <script src="style.js"></script>
+</body>
+</html>

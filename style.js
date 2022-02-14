@@ -20,16 +20,16 @@ function print_text(idx) {
     item.innerHTML = texts[idx];
 }
 
-let preX;
-let preY;
+// let preX;
+// let preY;
 
 //マウスストーカー用のdivを取得
 const stalker = document.getElementById('stalker'); 
 
 //上記のdivタグをマウスに追従させる処理
 document.addEventListener('mousemove', function (e) {
-    stalker.style.transformOrigin = preX + 'px ' + preY + 'px'; 
-    stalker.style.transform = 'rotate(' + Math.atan((e.clientY - preY)/(e.clientX - preX)) + 'rad) translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
-    preX = e.clientX;
-    preY = e.clientY;
+    // stalker.style.transformOrigin = preX + 'px ' + preY + 'px'; 'rotate(' + Math.atan((e.clientY - preY)/(e.clientX - preX)) + 'rad) 
+    stalker.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+    // preX = e.clientX;
+    // preY = e.clientY;
 });

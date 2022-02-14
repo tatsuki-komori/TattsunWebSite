@@ -203,22 +203,3 @@ header a {
       transform: rotate(360deg) translateX(-300px) rotate(-360deg);
     }
 }
-
-#stalker {
-    pointer-events: none;
-    position: fixed;
-    width: 100px;
-    height: 100px;
-    top: -50px;
-    left: -50px;
-    transform: translate(0,0);
-    transition: transform 0.2s;
-    transition-timing-function: ease-out; 
-    background-image: url(images/neko_top.png);
-    background-size: cover;
-    z-index: 999;
-}
-
-#stalker:hover {
-    background-image: url(images/neko_deleted.png);
-}

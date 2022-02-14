@@ -204,46 +204,21 @@ header a {
     }
 }
 
-.works {
-    padding: 180px;
-    text-align: center;
-    background-color: #fffdf3;
+#stalker {
+    pointer-events: none;
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    left: -50px;
+    transform: translate(0,0);
+    transition: transform 0.2s;
+    transition-timing-function: ease-out; 
+    background-image: url(images/neko_top.png);
+    background-size: cover;
+    z-index: 999;
 }
 
-.works h2 {
-    border-bottom: 3px solid #f90;
-    display: inline-block;
-}
-
-.works-content {
-    display: block;
-    margin-top: 40px;
-    padding: 40px;
-    background-color: #fff;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-    text-align: left;
-    display: flex;
-}
-
-.works-content img {
-    width: 320px;
-    height: 180px;
-}
-
-.works-text {
-    margin-left: 32px;
-}
-
-.works-text h3 {
-    font-size: 28px;
-}
-
-.works-text span {
-    font-size: 16px;
-    margin-left: 16px;
-}
-
-.works-text p {
-    font-size: 16px;
-    margin-top: 16px;
+#stalker:hover {
+    background-image: url(images/neko_deleted.png);
 }

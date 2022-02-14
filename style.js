@@ -1,17 +1,3 @@
-// function loop(timestamp){
-    // let items = document.getElementsByClassName('item');
-    // let item_num = items.length;
-    // let rad = (2/item_num)*Math.PI;
-    // let item_width = items[0].clientWidth;
-    // let circle_r = (document.getElementById('circle-box').clientWidth - item_width) / 2;
-    // for (let i = 0; i < item_num; i++){
-    //     let x = Math.cos(rad * i) * circle_r + circle_r;
-    //     let y = -Math.sin(rad * i) * circle_r + circle_r;
-    //     items[i].style.left = x + "px";
-    //     items[i].style.top = y + "px";
-    // }
-// }
-
 const titles = [
     "テニス",
     "Leaders",
@@ -33,3 +19,17 @@ function print_text(idx) {
     let item = document.getElementById('galary-text')
     item.innerHTML = texts[idx];
 }
+
+let preX;
+let preY;
+
+//マウスストーカー用のdivを取得
+const stalker = document.getElementById('stalker'); 
+
+//上記のdivタグをマウスに追従させる処理
+document.addEventListener('mousemove', function (e) {
+    stalker.style.transformOrigin = preX + 'px ' + preY + 'px'; 
+    stalker.style.transform = 'rotate(' + Math.atan((e.clientY - preY)/(e.clientX - preX)) + 'rad) translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+    preX = e.clientX;
+    preY = e.clientY;
+});
